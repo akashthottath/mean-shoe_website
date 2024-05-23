@@ -1,0 +1,40 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.review {
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 20px;
+    color: gold;
+}
+
+.review-content {
+    font-size: 16px;
+    line-height: 1.6;
+}

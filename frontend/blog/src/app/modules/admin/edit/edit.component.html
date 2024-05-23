@@ -1,0 +1,52 @@
+<div class="total">
+  <!-- navbar -->
+  <app-adminnav></app-adminnav>
+  <!-- main section -->
+  <h1 class="heading m-4">Edit Details</h1>
+  <form [formGroup]="editForm">
+    <!-- id -->
+      <div class="input-group mb-3 shadow">
+        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-shield-halved"></i></span>
+        <input formControlName="Id" type="number" class="form-control" placeholder="ID" aria-label="ID" aria-describedby="basic-addon1">
+
+
+      </div>
+
+      <!-- pdtName -->
+      <div class="input-group mb-3 shadow">
+        <input formControlName="productName" type="text" class="form-control" placeholder="Product_Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-id-badge"></i></span>
+
+      </div>
+      <!-- image -->
+      <div class="mb-3 shadow">
+        <label for="basic-url" class="form-label">Product Image</label>
+        <div class="input-group">
+          <input formControlName="image" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+        </div>
+      </div>
+      <!-- price -->
+      <div class="input-group mb-3 shadow">
+        <span class="input-group-text">$</span>
+        <input formControlName="price" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">.00</span>
+      </div>
+      <!-- brand -->
+      <div class="input-group mb-3 shadow">
+        <input formControlName="brand" type="text" class="form-control" placeholder="Brand" aria-label="Brand">
+      </div>
+      <!-- description -->
+      <div class="input-group shadow">
+        <span class="input-group-text">Description</span>
+        <textarea formControlName="description" class="form-control" aria-label="With textarea"></textarea>
+      </div>
+
+<div class="btn-section mt-5">
+        <button [disabled]="editForm.invalid" [class.disabled]="editForm.invalid"  class="btn btn-primary me-4" (click)="edit()">submit</button>
+        <button routerLink="" class="btn btn-secondary" >Cancel</button>
+</div>
+
+   </form>
+  
+  
+</div>

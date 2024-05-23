@@ -1,0 +1,26 @@
+.card img{
+    border-radius: 5%;
+}
+.card{
+    background-color: black;
+}
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h5{
+  font-size: 15px;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+a{
+  font-family: sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  padding: 2px;
+  margin-left: 3px;
+  margin-top: -8px;
+}
+

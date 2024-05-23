@@ -1,0 +1,30 @@
+
+.card img{
+    border-radius: 5%;
+}
+.card{
+    background-color: black;
+}
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section {
+    background-color: #fff;
+    padding: 50px 0;
+  }
+  .about-section h2 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .about-section p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  h5{
+    font-size: 19px;
+  }

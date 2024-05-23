@@ -1,0 +1,71 @@
+<div class="row vh-100 g-0">
+    <!-- leftside -->
+    <div class="col-lg-6 position-relative d-none d-lg-block">
+        <div class="bg-holder" style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230527/pngtree-nike-running-shoes-on-black-background-with-colorful-splashes-image_2671040.jpg');"></div>
+    </div>
+    <!-- rightside -->
+    <div class="col-lg-6 bg-body-secondary">
+        <div class="row align-items-center justify-content-center h-100 g-0 px-4 px-sm-0">
+            <div class="col col-sm-6 col-lg-7 col-xl-6">
+                <!-- logo -->
+                <a href="" class="d-flex justify-content-center mb-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2RFSQMk4y_HwQykYpOwV0VmpPgv85EY2bYcq4NvxaMar5eFnyQUGSesak9CsHupoHO_8&usqp=CAU"  alt="" width="60">
+                </a>
+
+                <div class="text-center mb-3 header">
+                    <h3 class="fw-bold">LOG IN</h3>
+                    <p class="text-secondary">Get Access To Your Account</p>
+                </div>
+                <!-- social login -->
+                <button class="btn btn-lg btn-outline-secondary btn-outline-custom w-100 mb-3">
+                    <i class="fa-brands fa-google text-danger me-1 fs-6"></i> Login With Google
+                </button>
+                <button class="btn btn-lg btn-outline-secondary btn-outline-custom  w-100">
+                    <i class="fa-brands fa-facebook text-primary me-1 fs-6"></i>
+                    Login With FaceBook
+                </button>
+                <!-- dividere -->
+                <div class="position-relative">
+                    <hr class="text-secondary divider">
+                    <div class="divider-content-center">or</div>
+                </div>
+                <!-- form -->
+                <form [formGroup]="loginForm">
+                    <!-- email -->
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <input formControlName="Email" type="email"  class="form-control form-control-lg fs-6"  placeholder="email">
+                    </div>
+                    <span *ngIf="this.loginForm.get('Email')?.errors && this.loginForm.get('Email')?.touched" class="validation">*Email is Required</span>
+                    
+
+                    
+                    <!-- password -->
+                    <div class="input-group mt-3">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <input formControlName="Password" type="password"  class="form-control form-control-lg fs-6"  placeholder="Password">
+                    </div>
+                    <span *ngIf="this.loginForm.get('Password')?.errors && this.loginForm.get('Password')?.touched" class="validation">*Password is Required</span>
+                    
+                    <div class="input-group mb-3 d-flex justify-content-between">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="formCheck">
+                            <label for="formCheck" class="form-check-label text-secondary"><small>Rember Me</small></label>
+                        </div>
+                        <div>
+                            <small class="fw-bold"><a routerLink="forgetPassword">Forgot Password</a></small>
+                        </div>
+                    </div>
+                    <button [disabled]="loginForm.invalid" [class.disabled]="loginForm.invalid" (click)="login()" class="btn btn-primary btn-lg w-100 mb-3">LogIn</button>
+                </form>
+                <div class="text-center">
+                    <small class="fst-italic fw-medium">Don't Have  An Account <a routerLink="register" class="fw-bold">SignUp</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

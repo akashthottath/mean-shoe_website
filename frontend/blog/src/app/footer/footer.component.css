@@ -1,0 +1,96 @@
+footer {
+    display: flex;
+  }
+  
+  .footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .fMenuTitle {
+    font-size: 16px;
+  }
+  
+  .fList {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .fListItem {
+    margin-bottom: 10px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .fInput {
+    padding: 5px;
+  }
+  
+  .fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+  }
+  
+  .fIcons{
+    display: flex;
+  }
+  
+  .fIcons i{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .copyright{
+    font-weight: 300;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  h1{
+   font-family: "Madimi One", sans-serif;
+    font-weight: 900;
+    font-style: normal; 
+  }
+  ul li{
+    font-family: "Headland One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+  }
+
+  @media screen and (max-width:480px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footerLeft{
+        padding: 20px;
+        width: 90%;
+      }
+    
+      .footerRight{
+        padding: 20px;
+        width: 90%;
+        align-items: center;
+        background-color: whitesmoke;
+      }
+    
+      .payment{
+        width: 90%;
+        padding: 20px;
+      }
+  }

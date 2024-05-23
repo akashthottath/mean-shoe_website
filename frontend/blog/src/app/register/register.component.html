@@ -1,0 +1,56 @@
+
+<div class="body">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="register-form  shadow">
+              <h2 class="text-center mb-4">Register</h2>
+              <!-- form -->
+              <form [formGroup]="registerForm">
+                <!-- fname -->
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="firstName">First Name</label>
+                    <input formControlName="FirstName" type="text" class="form-control w-100 fst-italic" id="firstName"  placeholder="Enter first name">
+                    <span *ngIf="this.registerForm.get('FirstName')?.errors && this.registerForm.get('FirstName')?.touched" class="validation">*FirstName is Required</span>
+                  </div>
+                  <!-- lname -->
+                  <div class="form-group col-md-6">
+                    <label for="lastName">Last Name</label>
+                    <input formControlName="LastName" type="text" class="form-control w-100 fst-italic" id="lastName"  placeholder="Enter last name">
+                    <span *ngIf="this.registerForm.get('LastName')?.errors && this.registerForm.get('LastName')?.touched" class="validation">*LastName is Required</span>
+                  </div>
+                </div>
+                
+                <!-- email -->
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input formControlName="Email" type="email" class="form-control w-100 fst-italic" id="email"  placeholder="Enter email">
+                  <span *ngIf="this.registerForm.get('Email')?.errors && this.registerForm.get('Email')?.touched" class="validation">*Email is Required</span>
+                </div>
+                               
+                <!-- password -->
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input formControlName="Password" type="password" class="form-control w-100 fst-italic" id="password"  placeholder="Password">
+                  <span *ngIf="this.registerForm.get('Password')?.errors && this.registerForm.get('Password')?.touched" class="validation">*Password is Required</span>
+                </div>
+                              
+                <!-- confirm password -->
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input formControlName="confirmPassword" type="password" class="form-control w-100 fst-italic" id="confirmPassword"  placeholder="Confirm Password">
+                  <span *ngIf="this.registerForm.get('confirmPassword')?.errors && this.registerForm.get('confirmPassword')?.touched" class="validation">*confirmPassword is Required</span>
+                  <span *ngIf="this.registerForm.hasError('passwordValidator','confirmPassword')" class="validation">*Password didn't Matched</span>
+                </div>
+                <!-- register button -->
+                <button [disabled]="registerForm.invalid" [class.disabled]="registerForm.invalid" (click)="register()"  class="btn btn-success btn-block mt-4" value="Register">Register</button>
+              </form>
+              <div class="text-center mt-3">
+                <small class="fst-italic fw-bold mt-1 fs-6">Already Have  An Account Please<a routerLink="" class="fw-bold fst-italic text-light"> Login</a></small>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

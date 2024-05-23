@@ -1,0 +1,66 @@
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: red;
+}
+.bg-holder{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.btn-outline-custom {
+    color: #31374a;
+    border-color: #ddd;
+}
+.btn-outline-custom:hover {
+    color: #31374a;
+    border-color: #eee;
+    background-color: #eee;
+}
+.header h3{
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.header p{
+    font-family: "Oleo Script Swash Caps", system-ui;
+    font-weight: 900;
+    font-style: normal;
+}
+.btn{
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.btn i{
+    vertical-align: text-top;
+}
+.divider-content-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #999;
+}
+.divider{
+    margin: 2rem 0;
+}
+  /* validation span */
+  .validation{
+    margin-bottom: 10px;
+   color: rgb(53, 8, 8);
+   font-weight: bolder;
+   
+  }

@@ -1,0 +1,19 @@
+
+  /* heading */
+  h1{
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+    color: #fb641b;
+  }
+  /* table */
+  table, tr, th, td{
+    border: 1px solid black;
+  }
+        
+    td{
+        padding: 10px;
+        text-align: center;
+        color: brown;
+      }

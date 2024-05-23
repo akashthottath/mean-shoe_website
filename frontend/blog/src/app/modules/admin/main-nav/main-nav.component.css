@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+}
+.sidenav-container {
+  height: 100%;
+  /* background-color: yellow; */
+}
+
+.sidenav {
+  width: 200px;
+  background-color: rgb(165, 94, 106);
+}
+.blog{
+  background-color: rgb(165, 94, 106);
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+/* ------------ */
+.menu{
+  text-decoration: none;
+  font-size: 28px;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+.list-item a span{
+  color: white;
+  font-size: 18px;
+  border-bottom: 2px solid green;
+  cursor: pointer;
+  font-family: "Madimi One", sans-serif;
+  font-style: normal;
+  margin-top: 10px;
+}
+ i{
+  color: black;
+  width: 25px;
+  height: 20px;
+}

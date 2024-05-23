@@ -1,0 +1,84 @@
+nav {
+    background-color: #111;
+    color: white;
+    padding: 20px 50px;
+  }
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navItem h3{
+    font-family: "Madimi One", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
+  }
+  .navItem span{
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(170, 143, 143); */
+    background-color: rgb(126, 109, 78);
+    padding: 8px 14px;
+    border-radius: 10px;
+  }
+  
+  .searchInput {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .searchInput::placeholder {
+    color: lightgray;
+  }
+  
+  .limitedOffer {
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+  }
+  
+  .navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+  }
+  .navBottom a{
+    text-decoration: none;
+    font-family: "Sulphur Point", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width:480px) {
+    nav{
+      padding: 20px;
+    }
+  
+    .search{
+      display: none;
+    }
+  
+    .navBottom{
+      flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,48 @@
+<!-- navbar -->
+<app-adminnav></app-adminnav>
+  <!-- table -->
+  <div class="dashboard w-100">
+    <!-- heading -->
+    <div class="title">
+      <h1 class="text-center align-items-center justify-content-center fw-bolder text-decoration-underline">All Users</h1>
+    </div>
+  
+    <!-- table -->
+    <div class="table">
+      <table class="table shadow-lg border p-2">
+        <thead>
+          <tr class="fs-6">
+            <th class="text-center">User Id</th>
+            <th class="text-center">First Name</th>
+            <th class="text-center">Last Name</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">Action</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr *ngFor="let user of allUsers | users:searchKey:'FirstName'" class="fw-bold content">
+              <td>**</td>
+              <td>{{user.FirstName}}</td>
+              <td>{{user.LastName}}</td>
+              <td>{{user.Email}}</td>
+              <td>
+                  
+                  <!-- trash -->
+                  <div *ngIf="!user.isAdmin">
+                    <a (click)="deleteUser(user._id)" class="fa-solid fa-trash btn text-danger" ></a>
+                  </div>
+                  <div *ngIf="user.isAdmin" class="d-flex align-items-center justify-content-center">
+                    <p>Admin</p>
+                  </div>
+
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  

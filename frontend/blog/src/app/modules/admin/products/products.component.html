@@ -1,0 +1,48 @@
+<!-- navbar -->
+<app-adminnav></app-adminnav>
+<!-- table -->
+<div class="dashboard w-100 justify-content-center align-items-center">
+  <!-- heading -->
+  <div class="title d-flex gap-5">
+    <h1 class="text-decoration-underline">Product List</h1>
+  </div>
+
+  <!-- table -->
+  <div class="table">
+    <table class="table shadow-lg border p-2">
+      <thead>
+        <tr class="fs-6">
+          <th class="text-center">Id</th>
+          <th class="text-center">Product_Img</th>
+          <th class="text-center">Product_Name</th>
+          <th class="text-center">Brand</th>
+          <th class="text-center">Price</th>
+          <th class="text-center">Description</th>
+          <th class="text-center">Action</th>
+          
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let product of allProduct | products:searchKey:'productName'" class="content fw-bold">
+          <td>{{product.Id}}</td>
+          <td >
+            <div class="pdt-img">
+              <img [src]="product.image" alt="">
+            </div>
+          </td>
+          <td>{{product.productName}}</td>
+          <td>{{product.brand}}</td>
+          <td>$ {{product.price}}</td>
+          <td><p>{{product.description}}</p></td>
+          <td>
+              <!-- edit -->
+              <a routerLink="/admin/edit/{{product._id}}" class="fa-solid fa-pen text-success me-2 btn"></a>
+              <!-- view -->
+              <a class="fa-solid fa-trash btn text-danger" (click)="deleteProduct(product._id)"></a>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

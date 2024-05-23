@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="menu ms-5"><i class="fa-solid fa-shoe-prints"></i></mat-toolbar>
+    <mat-nav-list class="list-item ms-3 mt-5">
+      <a mat-list-item routerLink="/admin/products" class="mb-3"><span ><i class="fa-brands fa-shopify me-2"></i>PRODUCTS</span></a>
+      <a mat-list-item routerLink="/admin/users"class="mb-3"><span><i class="fa-solid fa-users me-2"></i>USERS</span></a>
+      <a mat-list-item routerLink="/admin/users" class="mb-3"><span><i class="fa-solid fa-list me-2"></i>LISTS</span></a>
+      <a mat-list-item href="#" class="mb-3"><span><i class="fa-solid fa-shield-halved me-2"></i>PRIVACY</span></a>
+      <a mat-list-item href="#" class="mb-3" routerLink=""><span><i class="fa-solid fa-handcuffs me-2"></i>LogOut</span></a>
+      <a mat-list-item href="#" class="mb-3">
+<span class="mt-5">
+  
+          <i class="fa-brands fa-facebook me-3 mt-4"></i>
+          <i class="fa-brands fa-twitter me-3 mt-4"></i>
+          <i class="fa-brands fa-instagram me-2 mt-4"></i>
+</span>
+      
+      </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="blog">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="menu fw-bolder">Sneaker's Club</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
